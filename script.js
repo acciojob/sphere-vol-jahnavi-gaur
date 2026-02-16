@@ -8,7 +8,7 @@ function volume_sphere(e) {
 		volume.value = 'NaN'
 	}
 	else{
-		volume.value = (4/3)*3.14*radius*radius*radius
+		volume.value = Math.round((4/3)*3.14*radius*radius*radius)
 	}
 	radius.value = ""
 } 
