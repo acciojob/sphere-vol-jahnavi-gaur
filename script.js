@@ -7,8 +7,10 @@ function volume_sphere(e) {
 	if(Number.isNaN(radius)){
 		volume.value = 'NaN'
 	}
-	else
+	else{
 		volume.value = (4/3)*3.14*radius*radius*radius
+	}
+	radius.value = ""
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
