@@ -2,13 +2,14 @@ function volume_sphere(e) {
     //Write your code here
 	e.preventDefault()
 	let radius = Number(document.querySelector('#radius').value.trim())
-	let volume = document.querySelector('#volume')
+	let volumeInput = document.querySelector('#volume')
 
 	if(Number.isNaN(radius)){
 		volume.value = 'NaN'
 	}
 	else{
-		volume.value = Math.round((4/3)*3.14*radius*radius*radius)
+		let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+        volumeInput.value = volume.toFixed(4);
 	}
 	radius.value = ""
 } 
